@@ -12,11 +12,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="chrom 调试小技巧, 八点半的星光">
-    <meta name="description" content="
-小技巧
+    <meta name="keywords" content="chrome调试小技巧, 八点半的星光">
+    <meta name="description" content="chrome 几个调试小技巧一键重新发起请求与后台联调或者排查Bug时，听到比较多的话大概就是：你再重新请求一次。可能有人会刷新一下页面，当然也会有人这样做：
 
-">
+打开控制台，选中network
+
+选择要重新发送的请求
+
+右键选择Replay">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +33,7 @@
 
     
 
-    <title>chrom 调试小技巧 | 八点半的星光</title>
+    <title>chrome调试小技巧 | 八点半的星光</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -320,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">chrom 调试小技巧</h1>
+                    <h1 class="description center-align post-title">chrome调试小技巧</h1>
                 </div>
             </div>
         </div>
@@ -440,7 +443,11 @@
         <div class="col s7">
           
           <div class="article-tag">
-            <span class="chip bg-color">No tag</span>
+            
+            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+              <span class="chip bg-color">前端</span>
+            </a>
+            
           </div>
           
         </div>
@@ -460,7 +467,7 @@
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp; 3
+          <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp; 556
         </div>
           
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -482,9 +489,51 @@
 
     <div class="card-content article-card-content">
       <div id="articleContent">
-        <blockquote>
-<p>小技巧</p>
+        <h1 id="chrome-几个调试小技巧"><a href="#chrome-几个调试小技巧" class="headerlink" title="chrome 几个调试小技巧"></a>chrome 几个调试小技巧</h1><h3 id="一键重新发起请求"><a href="#一键重新发起请求" class="headerlink" title="一键重新发起请求"></a>一键重新发起请求</h3><p>与后台联调或者排查Bug时，听到比较多的话大概就是：<strong>你再重新请求一次</strong>。可能有人会刷新一下页面，当然也会有人这样做：</p>
+<ol>
+<li><p>打开控制台，选中<code>network</code></p>
+</li>
+<li><p>选择要重新发送的请求</p>
+</li>
+<li><p>右键选择<code>Replay XHR</code><br><img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/1.png" alt="avatar"></p>
+</li>
+</ol>
+<p>快捷地请求需要再次请求的接口，又不用刷新页面，简直爽翻</p>
+<h3 id="在控制台快速发起请求"><a href="#在控制台快速发起请求" class="headerlink" title="在控制台快速发起请求"></a>在控制台快速发起请求</h3><p>有时候针对同样的请求，需要修改入参重新发起请求，有人这样做：</p>
+<ol>
+<li>选中network</li>
+<li>选择要修改入参的的接口</li>
+<li>选择<code>Copy as fetch</code></li>
+<li>在控制台粘贴代码，修改入参回车<br><img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/2.png" alt="avatar"><br><img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/3.png" alt="avatar"></li>
+</ol>
+<h3 id="3-复制Javascript变量"><a href="#3-复制Javascript变量" class="headerlink" title="3. 复制Javascript变量"></a>3. 复制Javascript变量</h3><p>假如你的代码输出一个比较复杂的对象，你又想复制下来发送给别人，怎么办？<code>JSON.stringify()</code>再复制吗？<br>有人用copy函数实现：<br><img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/4.png" alt="avatar"><br>直接回车，粘贴到编辑器中长这样：<br><img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/5.png" alt="avatar"></p>
+<h3 id="一键展开所有的DOM元素"><a href="#一键展开所有的DOM元素" class="headerlink" title="一键展开所有的DOM元素"></a>一键展开所有的DOM元素</h3><p>调试元素是&#x3D;时，层级比较深的情况下，有一种更方便的方式去展开进行调试</p>
+<blockquote>
+<p>按住opt键，然后点击要展开的最外层元素</p>
 </blockquote>
+<p>展开后效果：<br><img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/6.png" alt="avatar"></p>
+<h3 id="“-”与“-”选择器"><a href="#“-”与“-”选择器" class="headerlink" title="“$”与“$$”选择器"></a>“$”与“$$”选择器</h3><p> 大家估计都控制台用过document.querySelector与document.querySelectAll选择当前页面的元素，不过，这一大串着实长了点，完全可以用$ 与 $$ 替代<br> <img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/7.png" alt="avatar"></p>
+<p> 所以，大家更愿意用长串还是俩符号呢</p>
+<h3 id="Add-conditional-breakpoint条件断点"><a href="#Add-conditional-breakpoint条件断点" class="headerlink" title="Add conditional breakpoint条件断点"></a>Add conditional breakpoint条件断点</h3><p> 例如下面的代码，希望动物名称是“dog”时触发断点，可以怎么去操作？<br> <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> animal <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"cat"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">"red"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"dog"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">"pink"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"monkey"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">"green"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
+
+animal<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>name<span class="token punctuation">,</span> item<span class="token punctuation">.</span>color<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>如果没有条件断点，那么在调试大量数据的情况下，是不是要点N次debugger<br><img src="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/8.png" alt="avatar"></p>
+<h3 id="使用-i直接在控制台安装npm包"><a href="#使用-i直接在控制台安装npm包" class="headerlink" title="使用$i直接在控制台安装npm包"></a>使用$i直接在控制台安装npm包</h3><p>有时候使用如dayjs或者lodash的某个API，但是你又不想去官网查，咋整？<br>有这么一个插件<code>Console Importer</code>，可以用来在控制台直接安装npm包</p>
+<ol>
+<li>安装插件</li>
+<li>$i(‘名称’)安装npm包</li>
+</ol>
+<p>我还木有这么操作过，感兴趣的可以试试😂</p>
  
       </div>
       <hr />
@@ -510,7 +559,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://smile-stars.github.io/2022/08/17/chrom-diao-shi-xiao-ji-qiao/">https://smile-stars.github.io/2022/08/17/chrom-diao-shi-xiao-ji-qiao/</a>
+                    <a href="https://smile-stars.github.io/2022/08/17/chrome-diao-shi-xiao-ji-qiao/">https://smile-stars.github.io/2022/08/17/chrome-diao-shi-xiao-ji-qiao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -547,7 +596,11 @@
         <div class="post-meta__tag-list" style="display: inline-block">
           
           <div class="article-tag">
-            <span class="chip bg-color">No tag</span>
+            
+            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+              <span class="chip bg-color">前端</span>
+            </a>
+            
           </div>
           
         </div>
@@ -589,13 +642,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2022/08/17/chrom-diao-shi-xiao-ji-qiao/">
+                <a href="/2022/08/17/chrome-diao-shi-xiao-ji-qiao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="chrom 调试小技巧">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="chrome调试小技巧">
                         
-                        <span class="card-title">chrom 调试小技巧</span>
+                        <span class="card-title">chrome调试小技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -617,6 +670,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -902,7 +963,7 @@
         class="fas fa-chart-area"
       ></i
       >&nbsp;Total Words:&nbsp;<span class="white-color"
-        >158</span
+        >711</span
       >
          
        
