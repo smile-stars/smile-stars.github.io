@@ -3,15 +3,16 @@
 # --------------------------------------
 
 menu:
-  Home: / || fas fa-home
+  首页: / || fas fa-home
   Archives: /archives/ || fas fa-archive
   Tags: /tags/ || fas fa-tags
   Categories: /categories/ || fas fa-folder-open
   List||fas fa-list:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video
-  Link: /link/ || fas fa-link
-  About: /about/ || fas fa-heart
+  留言板: /message/ || fas fa-heart
+  # Link: /link/ || fas fa-link
+  # About: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -50,7 +51,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   preload: false
   CDN:
 
@@ -80,7 +81,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: https://s3.bmp.ovh/imgs/2022/08/19/eba9b14cdaafa456.jpeg
   effect: false
 
 # Disable all banner image
@@ -128,6 +129,9 @@ cover:
     - /img/3.jpg
     - /img/4.jpg
     - /img/5.jpg
+    - /img/6.jpeg
+    - /img/7.jpeg
+    - /img/8.png
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -426,9 +430,9 @@ messenger:
 footer:
   owner:
     enable: true
-    since: 2020
-  custom_text:
-  copyright: true # Copyright of theme and framework
+    since: 2022
+  custom_text: 这是自定义内容
+  copyright: false # Copyright of theme and framework
 
 # Analysis
 # --------------------------------------
@@ -522,7 +526,7 @@ tag_ui: # 留空或 index
 background: "linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)"
 
 # Footer Background
-footer_bg: false
+footer_bg: /img/1.png
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -824,7 +828,7 @@ aplayer:
     - https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
   css:
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
-  id: 2829961453
+  id: 7487801013
   server: netease
   type: playlist
   fixed: 'true'
@@ -895,18 +899,11 @@ inject:
      - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
      - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" >
    bottom:
-     - <script src="/live2d-widget/autoload.js"></script>
+     - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
-
-CDN_USE:
-  js:
-    - /live2d-widget/autoload.js
-
-live2d:
-  enable: true
 
 CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
