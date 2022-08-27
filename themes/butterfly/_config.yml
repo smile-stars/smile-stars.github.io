@@ -4,12 +4,14 @@
 
 menu:
   首页: / || fas fa-home
-  Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
-  List||fas fa-list:
-    Music: /music/ || fas fa-music
-    Movie: /movies/ || fas fa-video
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  娱乐||fas fa-list:
+    # Music: /music/ || fas fa-music
+    电影: /movies/ || fas fa-video
+    游戏: /games/ || fas fa-video
+    阅读: /books/ || fas fa-video
   留言板: /message/ || fas fa-heart
   # Link: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
@@ -809,20 +811,20 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # 背景音乐
 aplayer:
   ##侧边栏歌单
-  enable: true
+  enable: false
   js:
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
     - https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
@@ -900,6 +902,7 @@ inject:
      - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" >
    bottom:
      - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+     - <div class="aplayer no-destroy" data-id="7487801013" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div>
 
 # CDN
 # Don't modify the following settings unless you know how they work

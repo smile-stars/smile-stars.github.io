@@ -150,3 +150,35 @@ live2d:
   react:
     opacityDefault: 0.7
     opacityOnHover: 0.2
+
+douban:
+  user: 192000713
+  builtin: true # 如果为false，则不会自动生成页面，需要在执行hexo g后在执行hexo douban
+  book:
+    title: '阅读'
+    quote: '读万卷书，行万里路'
+    meta: true
+    comments: true
+    top_img: https://s3.bmp.ovh/imgs/2022/08/27/29d35bf86ea975d2.jpeg
+    aside: true
+    path: books
+    limit:
+  movie:
+    title: 'This is my movie title'
+    quote: 'This is my movie quote'
+    meta: true
+    comments: true
+    top_img: https://s3.bmp.ovh/imgs/2022/08/27/85f3e38c9ffaef69.jpeg
+    aside: true
+    path: movies
+    limit:
+  game:
+    title: 'This is my game title'
+    quote: 'This is my game quote'
+    meta: true
+    comments: true
+    top_img: https://s3.bmp.ovh/imgs/2022/08/27/80d863230aedd762.jpg
+    aside: true
+    path: games
+    limit:
+  timeout: 10000 
