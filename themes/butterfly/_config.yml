@@ -534,7 +534,7 @@ footer_bg: /img/1.png
 rightside-bottom:
 
 # Enter transitions (開啓網頁進入效果)
-enter_transitions: true
+enter_transitions: false
 
 # Background effects (背景特效)
 # --------------------------------------
@@ -651,7 +651,7 @@ subtitle:
 
 # Loading Animation (加載動畫)
 preloader:
-  enable: true
+  enable: false
   layout: spinner-box # gear, spinner-box 两种样式
 
 # aside (側邊欄)
