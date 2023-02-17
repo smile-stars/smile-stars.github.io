@@ -1,7 +1,8 @@
 ---
 title: chrome调试小技巧
 date: 2022-08-17 14:05:36
-tags: 前端
+categories: 
+    - 前端
 ---
 
 

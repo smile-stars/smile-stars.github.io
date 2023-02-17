@@ -2,7 +2,8 @@
 layout: web
 title: vscode实用小插件
 date: 2022-08-04 17:19:57
-tags: 前端
+categories: 
+    - 前端
 ---
 
 # 一、苹果代码截图插件 CodeSnap
