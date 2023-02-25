@@ -5,6 +5,7 @@ tags:
     - 面试
 categories: 
     - 前端
+    - javascript
 ---
 
 ### 谈谈对原型原型链的理解？
@@ -268,33 +269,302 @@ function throttle(fn, delay = 100) {
 
 ### 深拷贝与浅拷贝？如何实现？
 
+深拷贝时，会拷贝对象的所有属性，如果这些属性也是对象，会继续拷贝这些对象的属性
+
+浅拷贝，只会拷贝对象的第一层属性，如果这些属性还是对象，则不会对这些对象进行拷贝，而是直接复制对象的引用，这意味着，对于浅拷贝后的对象，如果原对象的属性值发生了变化，浅拷贝后的对象的属性值也会跟着发生变化。
+
+```js
+ // 浅拷贝
+ var obj = {
+    name: '章三',
+    age: 15
+ }
+
+ // 方法一：定义一个函数，遍历对象，将对象的每一个属性复制到另一个对象中
+  var obj2 = {}
+
+ function shallowCopy(obj, targetObj) {
+    for (let key in obj) {
+        targetObj[key] = obj[key]
+    }
+ }
+
+ shallowCopy(obj, obj2)
+
+ // 方法二：直接赋值
+ var obj2 = obj
+```
+
+实现深拷贝
+
+```js
+var obj = {
+    name: '章三',
+    age: 15,
+    car: ["奔驰", "宝马", "特斯拉", "奥拓"],
+    dog: {
+        color: red,
+        age: 3
+    }
+}
+
+// 方法一：
+
+var obj2 = {}
+
+function deepCopy(obj, targetObj) {
+    for(let key in obj) {
+        let  item = obj[key]
+    }
+    if(item instanceof Array) {
+        targetObj[key] = []
+        deepCopy(item, targetObj[key])
+    } else if(item instance Object) {
+        targetObj[key] = {}
+        deepCopy(item, targetObj[key])
+    } else {
+        targetObj[key] = obj[key]
+    }
+}
+deepCopy(obj, obj2)
+
+//方法二：
+const person = {name: 'Sam', age: 31, child: {name: 'Ann'}};
+
+const person2 = JSON.parse(JSON.stringify(person));
+```
+
 ### var、let、const的区别？
+
+var、let可以声明变量，const可以声明常量
+var、let声明的变量值可以被改变，const声明的引用类型的值可以改变
+
+var是函数作用域，let和const是块级作用域
+
+var有变量提升，可以在声明之前调用，不会报错
+
+const一旦声明必须赋值
+
+暂时性死区：只要块级作用域内存在let命令，它所声明的变量就绑定这个区域，不再受外界的影响
+
+块级作用域：指一个代码块区域，指变量只作用于当前代码块
 
 ### ES next新特性有哪些？
 
+1. 块级作用域（let、const）
+2. 箭头函数
+3. Class
+4. 模版字符串
+5. 解构
+6. Proxy
+7. Promise
+
 ### 箭头函数与普通函数的区别？
+
+写法不同，this指向不同
+箭头函数不能创建构造函数
 
 ### 使用new创建对象的过程是什么样的？
 
+1. 创建一个空对象
+
+2. 将对象的__proto__属性值指向其构造函数的prototype
+
+3. 执行构造函数中的代码
+
+4. 返回对象
+
 ### this的指向问题？
+
+谁调用，就指向谁
+
+箭头函数的this指向它声明时所在函数的this，如果是全局声明，就指向window
 
 ### 手写bind方法？
 
+
+
 ### 闭包？应用场景？缺点？如何避免？
+
+```js
+function outer() {
+    var a = 1;
+    function inner() {
+        console.log(a);
+    }
+    return inner;
+}
+
+var b = outer(); // 如果没有将outer的返回值赋值给b，那么内部函数就不会被引用，就不会形成闭包
+
+```
+
+1. 什么是闭包？函数和函数内部能访问到的变量的总和，就是一个闭包。
+2. 如何生成闭包? 函数嵌套 + 内部函数被引用。
+3. 闭包作用？隐藏变量，避免放在全局有被篡改的风险。
+4. 使用闭包的注意事项？不用的时候解除引用，避免不必要的内存占用。
+5. 闭包的缺点：使用时候不注意的话，容易产生内存泄漏。
 
 ### Js事件循环？
 
+js是单线程的，默认一个情况下只能进行一个任务
+
+**阻塞代码与非阻塞代码**
+- 阻塞代码：同步代码，会严格按照单线程，从上到下从左到右执行
+
+- 非阻塞代码：异步执行的代码，js在工作时依然会按照顺序依次执行，当遇到需要异步操作的代码时，会先将其挂起，继续执行同步代码，等到同步代码执行完成再执行被挂起的代码
+
+事件循环机制：所有的同步任务都是在主线程上执行，形成一个执行栈，在主线程之外，还有一个任务队列。在代码执行过程中先执行同步代码，遇到宏任务就先存放在宏任务队列中，遇到为任务就先存放在为任务队列中，等到同步任务执行完成，再依次清空微任务队列与宏任务队列
+
+![事件循环机制](https://img-blog.csdnimg.cn/img_convert/346aa917c1d37864445c8c58f86e5830.png)
+
+![异步代码执行顺序](https://img-blog.csdnimg.cn/e9a98a94b83c41b791e074dcc8ec67ae.png)
+
+**执行顺序**
+1. 执行顺序： 微任务 > dom渲染 > 宏任务
+2. 微任务比宏任务执行早的原因：
+   微任务：
+   ES 语法标准之内，JS 引擎来统一处理。即，不用浏览器有任何关于，即可一次性处理完，更快更及时。
+   宏任务：
+   ES 语法没有，JS 引擎不处理，浏览器（或 nodejs）干预处理。
+
 ### 对于promise的理解？
 
+promise目的：异步编程解决回调地狱，让程序开发者编写的异步代码具有更好的可读性。
+
+有三种状态：
+    - pendding-等待
+    - resolved-完成
+    - rejected-失败
+
+promise对象的方法：
+    - then
+        接收两个参数，一个成功，一个失败
+    - catch
+        与then方法的reject回调用法相同，如果任务处于rejected状态，直接执行catch；如果任务处于pendding状态，则注册catch回调，等到状态变成rejected时再执行
+    - all
+        - Promise.all方法用于多个异步任务执行，当所有的任务都正常完成时（resolve），再做后面处理的场景
+        - `Promise.all([promise, promise2])`当promise1与promise2都为resolve时才会resolve，只要有一个为reject，则为reject
+        - 对应的，`Promise.all`返回的promise对象的then方法，第一个回调的参数也是一个数组
+        ```js
+            const p1 = Promise.resolve(1);
+            const p2 = new Promise(resolve => {
+                setTimeout(() => {
+                resolve(2);
+            }, 1000);
+            });
+
+            Promise.all([p1, p2])
+            .then(
+                ([result1, result2]) => {console.log('resolve', result1, result2);}
+            );
+
+            // 执行结果
+            resolve 1 2
+        ```
+    - race
+        - Promise.race用于多个异步任务执行，当其中有一个任务完成或失败时，就执行后续的处理
+        - Promise.race接收一个数组作为参数，返回一个新的promise
+
+        
+
+### async与await
+
+promise是通过then方法注册回调方式
+
+async/await是以同步代码的形式写异步逻辑
+
+必须成对使用
+
+- 如果方法中有await，方法需要加async修饰符。await后面跟一个promise。await表达式结果是promise resolve的值。
+
+```js
+const task = () => {
+	return new Promise(resolve => {
+  	setTimeout(() => {
+    	console.log('1');
+      resolve('2');
+    }, 1000);
+  });
+};
+
+async function test() {
+  console.log(0);
+	const res = await task();
+  console.log(res);
+}
+
+test();
+
+// 执行结果
+0
+1
+2
+```
+
+- async方法返回一个promise。其resolve的值就是async方法中return的值。
+
+```js
+async function task1() {
+	return 'test';
+}
+
+
+task1()
+.then(console.log);
+
+// 执行结果
+test
+```
+- 如果await后面返回的promise reject掉，需要用try catch语句捕获这个reject
 ### 手写promise
 
-### 实现promise.all方法
+- 定义三个状态
+- 创建构造函数 function Promise(excutor){}
+- 构造函数内部定义当前状态state/resolve值/reject的reson，定成功回调onFullfilled与失败回调onRejected
+- 声明一个resolve函数，如果当前状态是pendding，就将state设置成fullFilled，给value赋值，遍历onFullFilled回调
+- 声明一个reject函数，如果当前状态是pendding，就将state设置成rejected，给reson赋值，遍历onRejected回调
+- 将resolve与reject两个方法传入excutor，`excutor(recolve, reject)`
 
 ### CommonJs与ESM的区别？
 
+- commonjs：
+    ```js
+    // 导出
+    let a = 1
+    let b = 2
+    module.exports = {
+        a,
+        b
+    }
+
+    // 引入
+    let {a, b} = require('xx.js')
+
+    ```
+
+- esm:
+    ```js
+    let a = 1
+    let b = 2
+    export {
+        a,
+        b
+    }
+
+    import {a, b} from 'xx.js'
+    ```
+
 ### 柯里化是什么？有什么用？如何实现？
 
+是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
+
 ### 关于JS垃圾回收？
+
+js中的内存管理是自动的，每当我们创建函数、对象、数组的时候会自动的分配相应的内存空间;
+
+- 对象不再被引用的时候是垃圾;
+- 对象不能从根上访问到时也是垃圾;
 
 ### 实现一个发布订阅？
 
