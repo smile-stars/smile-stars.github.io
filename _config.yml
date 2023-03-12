@@ -185,3 +185,34 @@ douban:
     path: games
     limit:
   timeout: 10000 
+
+
+# 那年今日
+history_calendar:
+  priority: 4
+  enable: true
+  enable_page: all
+  layout:
+    type: class
+    name: sticky_layout
+    index: 0
+  temple_html: '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>'
+
+# # 时钟
+# # electric_clock
+# # see https://akilar.top/posts/4e39cf4a/
+# electric_clock:
+#   enable: true # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: all # 应用页面
+#   exclude:
+#     # - /posts/
+#     # - /about/
+#   layout: # 挂载容器类型
+#     type: class
+#     name: sticky_layout
+#     index: 0
+#   loading: https://npm.elemecdn.com/hexo-butterfly-clock/lib/loading.gif #加载动画自定义
+#   clock_css: https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.css
+#   clock_js: https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.js
+#   ip_api: https://pv.sohu.com/cityjson?ie=utf-8
