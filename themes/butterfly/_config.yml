@@ -828,7 +828,7 @@ aplayer:
   enable: false
   js:
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
-    - https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
+    - https://fastly.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
   css:
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
   # id: 7487801013
@@ -899,11 +899,11 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
     head:
-      # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-      - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
-      - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" >
+      # - <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+      - <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+      - <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" >
     bottom:
-      #  - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+      #  - <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
       # - <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
       - <script defer src="/live2d-widget/autoload.js"></script>
       - <div class="aplayer no-destroy" data-id="3072883579" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div>
@@ -941,7 +941,7 @@ CDN:
     # algolia_js:
     # algolia_search_v4:
     # instantsearch_v4:
-    # pjax:
+    pjax: https://lib.baomitu.com/pjax/0.2.8/pjax.min.js
     # gitalk:
     # gitalk_css:
     # blueimp_md5:
@@ -960,20 +960,20 @@ CDN:
     # canvas_ribbon:
     # canvas_fluttering_ribbon:
     # canvas_nest:
-    # lazyload:
-    # instantpage:
+    lazyload: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js
+    instantpage: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js
     # typed:
     # pangu:
     # fancybox_css_v4:
     # fancybox_v4:
     # medium_zoom:
-    # snackbar_css:
-    # snackbar:
+    snackbar_css: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css
+    snackbar: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js
     # activate_power_mode:
     # fireworks:
     # click_heart:
     # ClickShowText:
-    # fontawesomeV6:
+    fontawesomeV6: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
     # aplayer_css:
