@@ -529,6 +529,7 @@ tag_ui: # 留空或 index
 background: "linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)"
 
 # Footer Background
+# /img/1.png
 footer_bg: /img/1.png
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
@@ -555,8 +556,9 @@ canvas_fluttering_ribbon:
   enable: false
   mobile: false
 
+# 花瓣特效
 sakura:
-  enable: true
+  enable: false
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
@@ -828,7 +830,7 @@ aplayer:
   enable: false
   js:
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
-    - https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
+    - https://gcore.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
   css:
     - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
   # id: 7487801013
@@ -899,14 +901,12 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
     head:
-      # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-      - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
-      - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" >
+      - <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+      - <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" >
     bottom:
-      #  - <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
-      # - <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
       - <script defer src="/live2d-widget/autoload.js"></script>
       - <div class="aplayer no-destroy" data-id="3072883579" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div>
+      - <script src='https://api.vvhan.com/api/snow'></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
