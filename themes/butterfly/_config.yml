@@ -4,10 +4,10 @@
 
 menu:
   首页: / || fas fa-home
-  旅行: /travel || fas fa-heart
-  归档: /archives/ || fas fa-archive
-  标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
+  博文||fas fa-list:
+    归档: /archives/ || fas fa-archive
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
   娱乐||fas fa-list:
     # Music: /music/ || fas fa-music
     电影: /movies/ || fas fa-video
