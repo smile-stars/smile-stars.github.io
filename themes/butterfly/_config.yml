@@ -679,7 +679,7 @@ aside:
       text: Follow Me
       link: https://github.com/xxxxxx
   card_announcement:
-    enable: true
+    enable: false
     content: 啊哦~没有公告
   card_recent_post:
     enable: true
@@ -988,7 +988,7 @@ CDN:
 # electric_clock
 # see https://akilar.top/posts/4e39cf4a/
 electric_clock:
-  enable: true # 开关
+  enable: false # 开关
   priority: 5 #过滤器优先权
   enable_page: all # 应用页面
   exclude:
