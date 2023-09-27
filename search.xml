@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于Hexo博客主题修改的记录</title>
+      <link href="/2023/09/27/hexo/zhu-ti-xiu-gai-ji-lu/"/>
+      <url>/2023/09/27/hexo/zhu-ti-xiu-gai-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<p>** 主题： ** 安知鱼 </p><p>参考文档：<a href="https://docs.anheyu.com/">https://docs.anheyu.com/</a></p><p>安知鱼博客地址：<a href="https://blog.anheyu.com/">https://blog.anheyu.com/</a></p><h2 id="为什么要修改主题？"><a href="#为什么要修改主题？" class="headerlink" title="为什么要修改主题？"></a>为什么要修改主题？</h2><p>之前使用的<code>butterfly</code>，起初看起来还好，后来越来越觉得眼花缭乱，于是有了更换主题的想法</p><h2 id="为什么选择安知鱼？"><a href="#为什么选择安知鱼？" class="headerlink" title="为什么选择安知鱼？"></a>为什么选择安知鱼？</h2><p>最初魔改<code>butterfly</code>的时候看到过作者的B站视频，然后顺藤摸瓜看到了作者的博客，瞬间被吸引。</p><p>页面简洁，风格有趣</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端性能优化</title>
       <link href="/2023/09/11/qian-duan/xing-neng-you-hua/"/>
       <url>/2023/09/11/qian-duan/xing-neng-you-hua/</url>
@@ -388,7 +413,7 @@
       
       <categories>
           
-          <category> 前端 </category>
+          <category> Hexo </category>
           
       </categories>
       
