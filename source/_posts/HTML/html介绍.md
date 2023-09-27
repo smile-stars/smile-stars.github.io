@@ -5,7 +5,6 @@ tags:
     - html
 categories:
     - 前端
-    - html
 ---
 > **注意：** HTML 的基础结构必须要掌握
 

@@ -5,7 +5,6 @@ tags:
     - 面试
 categories: 
     - 前端
-    - Vue
 ---
 
 ### Vue双向绑定原理？

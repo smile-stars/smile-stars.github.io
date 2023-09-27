@@ -5,7 +5,6 @@ tags:
     - 面试
 categories: 
     - 前端
-    - javascript
 ---
 
 ### 谈谈对原型原型链的理解？

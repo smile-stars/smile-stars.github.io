@@ -3,7 +3,7 @@ title: html标签
 date: 2023-03-10 16:29:12
 tags:
     - html
-categoried:
+categories:
     - 前端
 ---
 原文链接：https://note.noxussj.top/?source=nowcoder
