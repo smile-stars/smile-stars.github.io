@@ -99,7 +99,8 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: hexo-theme-matery
-theme: butterfly
+# theme: butterfly
+theme: anzhiyu
 
 encrypt:
   enable: true

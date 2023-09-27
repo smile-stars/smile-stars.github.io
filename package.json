@@ -9,16 +9,14 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "6.2.0"
+    "version": "6.3.0"
   },
   "dependencies": {
     "aplayer": "^1.10.1",
     "eslint": "^8.20.0",
     "hexo": "^6.2.0",
-    "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",
     "hexo-blog-encrypt": "^3.1.6",
     "hexo-butterfly-clock": "^1.0.7",
-    "hexo-butterfly-douban": "^1.2.5",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
