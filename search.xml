@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>v-for遍历渲染图片，获取元素的offsetTop不准确</title>
+      <link href="/2023/10/13/qian-duan/offset-wu-chai-wen-ti/"/>
+      <url>/2023/10/13/qian-duan/offset-wu-chai-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>使用v-for渲染包含大量图片的数据时，获取元素的offsetTop不准确，导致无法滚动到指定位置</p><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>仿照微信聊天页，实现聊天室页面，初始滚动到页面最底部，滚动条到顶部时加载新数据，并将滚动条定位到到前一页数据的顶部。</p><p>由于数据中包含大量图片，在通过offsetTop设置滚动条位置时，总是有偏移，图片越多越明显</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 每次滚动到最后一条新数据的位置</span><span class="token keyword">let</span> scrollTop <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'list-item'</span><span class="token punctuation">)</span><span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>offsetTopdocument<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>scrollTop <span class="token operator">=</span> document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollTop <span class="token operator">=</span> scrollTop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="分析问题"><a href="#分析问题" class="headerlink" title="分析问题"></a>分析问题</h2><p>一般情况下，出现这种问题大多与图片加载有关，Dom渲染后，图片还未加载完成，只是占了一个位置，此时获取到的offsetTop并不包含图片的高度，所以出现问题</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a><font color="red">解决方案</font></h2><h3 id="方案一：固定高度（目前再用）"><a href="#方案一：固定高度（目前再用）" class="headerlink" title="方案一：固定高度（目前再用）"></a>方案一：固定高度（目前再用）</h3><p>既然图片未加载完成，offsetTop获取不到图片的高，那么我们给图片加一个盒子，并给盒子固定高度，让图片在盒子里自适应，那么不管图片是否加载完，这一组元素的高度都已经固定了，就能准确获取元素的offsetTop了</p><blockquote><p>缺陷：图片尺寸宽高比差异过大，部分图片会出现变形，故需要设置个比较合适的宽高，</p></blockquote><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;div class&#x3D;&quot;media-box opc-0&quot;&gt;&lt;img v-lazy&#x3D;&quot;item.url+&#39;?x-oss-process&#x3D;style&#x2F;thumb&#39;&quot; class&#x3D;&quot;msg-img&quot;  alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;div&gt;.media-box &#123;max-width: xx;height: xx;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="方案二：结合图片加载方法（待验证）"><a href="#方案二：结合图片加载方法（待验证）" class="headerlink" title="方案二：结合图片加载方法（待验证）"></a>方案二：结合图片加载方法（待验证）</h3><p>既然offsetTop受到图片加载的影响，那么我们就在图片加载完成后再获取offsetTop，结合图片的load方法</p><blockquote><p>注意：要结合Debounce（防抖）函数使用，避免被重复触发</p></blockquote><pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;img src&#x3D;&quot;&quot; @load&#x3D;&quot;imgLoad&quot; &gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span>imgLoad <span class="token operator">=</span> <span class="token function">Debounce</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>imgLoad<span class="token punctuation">)</span><span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token function">imgLoad</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token keyword">let</span> scrollTop <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'xx'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>offsetTopdocument<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>scrollTop <span class="token operator">=</span> document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollTop <span class="token operator">=</span> scrollTop<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于Hexo博客主题修改的记录</title>
       <link href="/2023/09/27/hexo/zhu-ti-xiu-gai-ji-lu/"/>
       <url>/2023/09/27/hexo/zhu-ti-xiu-gai-ji-lu/</url>
