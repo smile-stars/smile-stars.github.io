@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Picgo + Gitee搭建免费图床</title>
+      <link href="/2023/10/21/ji-lu/picgo-gitee-da-jian-mian-fei-tu-chuang/"/>
+      <url>/2023/10/21/ji-lu/picgo-gitee-da-jian-mian-fei-tu-chuang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="1、Gitee准备"><a href="#1、Gitee准备" class="headerlink" title="1、Gitee准备"></a>1、Gitee准备</h3><h4 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h4><p>创建一个仓库用来存储上传的图片，选择开源</p><h4 id="创建私人令牌-token"><a href="#创建私人令牌-token" class="headerlink" title="创建私人令牌-token"></a>创建私人令牌-token</h4><blockquote><p>切记：令牌只显示一次，生成令牌后保存一份，后续要用到，否则就要重新生成</p></blockquote><p><img src="https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856269684-842f154f-004a-4975-8cc0-c90240c95fdf.png" alt="创建私人令牌"></p><p><img src="https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856284243-27d9b309-65ec-40a0-a0e9-379e6f6f7be1.png" alt="创建私人令牌"></p><h3 id="2、PicGo下载安装"><a href="#2、PicGo下载安装" class="headerlink" title="2、PicGo下载安装"></a>2、PicGo下载安装</h3><p>下载地址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p><h4 id="2-1-gitee插件配置"><a href="#2-1-gitee插件配置" class="headerlink" title="2.1 gitee插件配置"></a>2.1 gitee插件配置</h4><p>1、打开PicGo，选择插件设置，搜索并安装<code>gitee-uploader</code></p><p><img src="https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856502532-df594e97-f89a-456d-bc49-d2bd27f98f06.png" alt="插件配置"></p><p>2、配置<code>gitee-uploader</code></p><p><img src="https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856604066-77c67e5a-916c-44d6-a12e-cef322282693.png" alt="配置"></p><p><img src="https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856630880-4c8295dc-73b0-49b5-a013-088e63eeabec.png" alt="配置"></p><ul><li>名称：自定义</li><li>repo：仓库地址<blockquote><p>假如你的仓库地址为：<code>https://gitee.com/zhangsan/zhangsan-image.git</code><br>只需要输入：<code>zhangsan/zhangsan-image</code></p></blockquote></li><li>branch：master</li><li>token：第一步中生成的令牌</li></ul><p>3、图床设置</p><p>选择<code>gitee</code>，选中配置好的图床名称，将其设置为默认图床</p><p><img src="https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856958501-5ad8c85d-85f6-4951-a4e7-5458ae41f81d.png" alt="配置"></p><p>至此，基本完成，可上传图片。</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>1、Error: Error in repo name</p><p>此错误是gitee-uploader仓库配置有误，请检查配置。</p><p>2、”message”: “Not Found Project”</p><p>配置仓库地址时，可能添加了<code>.git</code>后缀，请检查</p><p>3、”message”: “Branch”</p><p>配置的分支有误，如配置了<code>master</code>，但是对应仓库未进行初始化，故没有<code>master</code>分支</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>uniapp中map组件自定义气泡</title>
       <link href="/2023/10/18/qian-duan/uniapp-zhong-map-zu-jian-zi-ding-yi-qi-pao/"/>
       <url>/2023/10/18/qian-duan/uniapp-zhong-map-zu-jian-zi-ding-yi-qi-pao/</url>
