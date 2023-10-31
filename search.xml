@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>色值记录</title>
+      <link href="/2023/10/31/ji-lu/se-zhi/"/>
+      <url>/2023/10/31/ji-lu/se-zhi/</url>
+      
+        <content type="html"><![CDATA[<div style="display: flex; flex-wrap: wrap; text-align: center;">    <div style="width: 100px; height:30px; margin-right: 10px; line-height: 30px; border-radius: 5px; background: #c0e0e0;">#c0e0e0</div>    <div style="width: 100px; height:30px; margin-right: 10px; line-height: 30px; border-radius: 5px; background: #a5d4e7;">#a5d4e7</div>    <div style="width: 100px; height:30px; margin-right: 10px; line-height: 30px; border-radius: 5px; background: #a5b6e7;">#a5b6e7</div>    <div style="width: 100px; height:30px; margin-right: 10px; line-height: 30px; border-radius: 5px; background: #d4a5e7;">#d4a5e7</div>    <div style="width: 100px; height:30px; margin-right: 10px; line-height: 30px; border-radius: 5px; background: #d6e7a5;">#d6e7a5</div>    <div style="width: 100px; height:30px; margin-right: 10px; line-height: 30px; border-radius: 5px; background: #e7c1a5;">#e7c1a5</div>    </div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据大屏</title>
+      <link href="/2023/10/31/qian-duan/shu-ju-da-ping/"/>
+      <url>/2023/10/31/qian-duan/shu-ju-da-ping/</url>
+      
+        <content type="html"><![CDATA[<p>datav插件：<a href="http://datav.jiaminghi.com/">http://datav.jiaminghi.com/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据大屏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Picgo + Gitee搭建免费图床</title>
       <link href="/2023/10/21/ji-lu/picgo-gitee-da-jian-mian-fei-tu-chuang/"/>
       <url>/2023/10/21/ji-lu/picgo-gitee-da-jian-mian-fei-tu-chuang/</url>
