@@ -2854,6 +2854,25 @@ blockquote > :last-child {
     padding: 1.875rem 0rem 0;
   }
 }
+.hbe-input-default {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+.hbe-input-field-default::after {
+  width: 100% !important;
+  height: 2px !important;
+  background: #b7c3ac !important;
+}
+.hbe-input-label-default::before {
+  top: -5px !important;
+  height: 60px !important;
+  background: #b7c3ac !important;
+  border-radius: 4px;
+}
+.hbe-input-label-default::after {
+  height: 5px !important;
+  background: #b7c3ac !important;
+}
 .loading-bg {
   display: -webkit-box;
   display: -moz-box;
