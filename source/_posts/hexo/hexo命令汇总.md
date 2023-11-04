@@ -16,3 +16,9 @@ categories:
 `hexo new page --path about/me "About me"`
 以上命令会创建一个 `source/about/me.md` 文件，同时 `Front Matter` 中的 `title` 为 `"About me"`
 
+3.
+
+hexo 博客文章加密
+https://zhuanlan.zhihu.com/p/113235573?utm_id=0
+
+
