@@ -1,6 +1,7 @@
 ---
 title: hexo命令汇总
 date: 2023-02-19 17:54:57
+sticky: 99999
 tags: 
     - 记录
 categories: 
