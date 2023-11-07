@@ -1079,6 +1079,11 @@ home_top:
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
+    - name: 算法
+      path: /categories/算法/
+      shadow: var(--anzhiyu-shadow-yellow)
+      class: yellow
+      icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: false

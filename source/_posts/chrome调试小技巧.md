@@ -15,7 +15,7 @@ categories:
 2. 选择要重新发送的请求
 
 3. 右键选择`Replay XHR`
-![小技巧](./chrome调试小技巧/1.png)
+![小技巧](https://gitee.com/syy1101/image/raw/master/1.png)
 
 快捷地请求需要再次请求的接口，又不用刷新页面，简直爽翻
 
@@ -27,16 +27,16 @@ categories:
 2. 选择要修改入参的的接口
 3. 选择`Copy as fetch`
 4. 在控制台粘贴代码，修改入参回车
-![小技巧](./chrome调试小技巧/2.png)
-![小技巧](./chrome调试小技巧/3.png)
+![小技巧](https://gitee.com/syy1101/image/raw/master/2.png)
+![小技巧](https://gitee.com/syy1101/image/raw/master/3.png)
 
 ## 复制Javascript变量
 
 假如你的代码输出一个比较复杂的对象，你又想复制下来发送给别人，怎么办？`JSON.stringify()`再复制吗？
 有人用copy函数实现：
-![小技巧](./chrome调试小技巧/4.png)
+![小技巧](https://gitee.com/syy1101/image/raw/master/4.png)
 直接回车，粘贴到编辑器中长这样：
-![小技巧](./chrome调试小技巧/5.png)
+![小技巧](https://gitee.com/syy1101/image/raw/master/5.png)
 
 ## 一键展开所有的DOM元素
 
@@ -44,12 +44,12 @@ categories:
 > 按住opt键，然后点击要展开的最外层元素
 
 展开后效果：
-![小技巧](./chrome调试小技巧/6.png)
+![小技巧](https://gitee.com/syy1101/image/raw/master/6.png)
 
 ## "$"与“$$”选择器
 
  大家估计都控制台用过document.querySelector与document.querySelectAll选择当前页面的元素，不过，这一大串着实长了点，完全可以用$ 与 $$ 替代
- ![小技巧](./chrome调试小技巧/7.png)
+ ![小技巧](https://gitee.com/syy1101/image/raw/master/7.png)
 
  所以，大家更愿意用长串还是俩符号呢
 
@@ -73,7 +73,7 @@ categories:
  })
  ```
 如果没有条件断点，那么在调试大量数据的情况下，是不是要点N次debugger
-![小技巧](./chrome调试小技巧/8.png)
+![小技巧](https://gitee.com/syy1101/image/raw/master/8.png)
 
 
 ## 使用$i直接在控制台安装npm包
