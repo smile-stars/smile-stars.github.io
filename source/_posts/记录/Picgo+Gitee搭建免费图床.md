@@ -17,9 +17,9 @@ tags:
 
 > 切记：令牌只显示一次，生成令牌后保存一份，后续要用到，否则就要重新生成
 
-![创建私人令牌](https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856269684-842f154f-004a-4975-8cc0-c90240c95fdf.png)
+![创建私人令牌](https://gitee.com/syy1101/image/raw/master/20231021-1.png)
 
-![创建私人令牌](https://cdn.nlark.com/yuque/0/2023/png/21654028/1697856284243-27d9b309-65ec-40a0-a0e9-379e6f6f7be1.png)
+![创建私人令牌](https://gitee.com/syy1101/image/raw/master/20231021-2.png)
 
 
 
