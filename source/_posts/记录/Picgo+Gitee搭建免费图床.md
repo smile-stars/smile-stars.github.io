@@ -3,6 +3,7 @@ title: Picgo + Gitee搭建免费图床
 date: 2023-10-21 10:36:15
 main_color: "#c0e0e0"
 tags:
+	- 记录
 ---
 
 ## 前期准备

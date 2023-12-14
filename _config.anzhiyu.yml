@@ -175,6 +175,7 @@ cover:
     - /img/cover/2309112.jpg
     - /img/cover/2309113.jpg
     - /img/cover/2309114.jpg
+    - https://gitee.com/syy1101/image/raw/master/20231214-1.jpg
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
