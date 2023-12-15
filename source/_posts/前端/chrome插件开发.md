@@ -1,6 +1,7 @@
 ---
 title: Chrome浏览器插件开发
 date: 2023-12-05 16:31:15
+main_color: '#d4a5e7'
 tags:
 	- chrome
 categories:
@@ -263,4 +264,12 @@ chrome.runtime.setUninstallURL("https://your_website.com/uninstall", function() 
   console.log("Uninstall URL has been set");
 });
 ```
-### 插件事件系统
+
+
+## 插件各脚本之间的关系
+
+![关系](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/11/2/16e29d0dea8191b9~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp)
+
+## 插件各脚本权限
+
+![权限](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/11/2/16e29ccb69463a4d~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp)
