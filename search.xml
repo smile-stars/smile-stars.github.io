@@ -4,11 +4,30 @@
   
     
     <entry>
-      <title>page</title>
+      <title>2024年任务清单</title>
+      <link href="/2023/12/16/sheng-huo/2024-nian-ren-wu-qing-dan/"/>
+      <url>/2023/12/16/sheng-huo/2024-nian-ren-wu-qing-dan/</url>
+      
+        <content type="html"><![CDATA[<!-- <div class='checkbox'><input type="checkbox" />            <p>纯文本测试</p>            </div><div class='checkbox checked'><input type="checkbox" checked="checked"/>            <p>支持简单的 <a href="https://guides.github.com/features/mastering-markdown/">markdown</a> 语法</p>            </div><div class='checkbox red'><input type="checkbox" />            <p>支持自定义颜色</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>绿色 + 默认选中</p>            </div><div class='checkbox yellow checked'><input type="checkbox" checked="checked"/>            <p>黄色 + 默认选中</p>            </div><div class='checkbox cyan checked'><input type="checkbox" checked="checked"/>            <p>青色 + 默认选中</p>            </div><div class='checkbox blue checked'><input type="checkbox" checked="checked"/>            <p>蓝色 + 默认选中</p>            </div><div class='checkbox plus green checked'><input type="checkbox" checked="checked"/>            <p>增加</p>            </div><div class='checkbox minus yellow checked'><input type="checkbox" checked="checked"/>            <p>减少</p>            </div><div class='checkbox times red checked'><input type="checkbox" checked="checked"/>            <p>叉</p>            </div> --><div class='checkbox'><input type="checkbox" />            <p>至少读完一本书（太不爱读书了≥_≤）</p>            </div><div class='checkbox'><input type="checkbox" />            <p>逛遍郑州大大小小打卡地，拍照记录</p>            </div><div class='checkbox'><input type="checkbox" />            <p>一个人去陌生的城市</p>            </div><div class='checkbox'><input type="checkbox" />            <p>一个人去吃火锅</p>            </div><div class='checkbox'><input type="checkbox" />            <p>一个人去唱K</p>            </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第28个生日</title>
       <link href="/2023/12/15/sheng-huo/yi-ge-ren-de-sheng-ri/"/>
       <url>/2023/12/15/sheng-huo/yi-ge-ren-de-sheng-ri/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码看着不太对，请再试试。" data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="f64d98dc217de6e2da56379b0beedfe8e98fa5dc212b8d6e3fadcd95dd5ab17f">fbbe9bde7786c624a82629bf9f450e1b48fc6911b66d70a00e88801db5dad20d7198de51cbb1f5e41c5666e7b0ca1c9d4cc39a0971b34de3268c86e04a73c6d1d488ac0d39146819d998f3428163eeb02cbab49808040b053d0f47f8c7f0a4ac1142859318045feb377907c10a56195118483a195e0bc64e16fa64e260490426f57004f97331908354f38f5ebb01504f06fb1d887581683839e54d6580187b6abbf45b4774996b9abc6e544e9cb32051271d0a5a7d9b5f6a3a25e1362f1a9af902482e62c9859636a1844df62e099f5cc1cc2b735120eb8b391c4f39cfbe556aa829033a9efac73c5609226b96f39c45b1695f00c3f6ef0bd5222cfebd8d15f93a82eabecfd9e6a3b165e54d361fbd55cc5a052b601f0dfcc2a3f9ec4b7b27116295cbb594ac50d885ecaa597e03df15e2dd1aedcd49454cf8501c75554694cd0f48625387cafca3e58c3f63de198289ab17208649fafbfb7a6b02121979552cd4f0da8891c0679218d724589e2770719c964f243165f866cfe3fa556d699cee</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">暗号，快输入暗号！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
