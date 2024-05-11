@@ -69,4 +69,11 @@ tags:
 
 配置的分支有误，如配置了`master`，但是对应仓库未进行初始化，故没有`master`分支
 
+4、Error: Error in repo name at new Octo....
+
+picGo图床设置中repo项配置有误。
+老版本中repo项需要填写完整的仓库地址：https://gitee.com/注册名/仓库名.git
+新版本的picGo，repo项只需要填写“注册名/仓库名”即可
+
+
 

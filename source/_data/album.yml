@@ -12,6 +12,14 @@
   top_link: /album
   top_btn_text: 返回
   album_list:
+    - date: 2024.05.01 23:00:00
+      content: 一个人的旅行——西安
+      address: 陕西西安
+      form: 八点半的星光
+      image: 
+        - https://gitee.com/syy1101/image/raw/master/大雁塔.jpg
+        - https://gitee.com/syy1101/image/raw/master/鼓楼.jpg
+        - https://gitee.com/syy1101/image/raw/master/西安.jpg
     - date: 2022/10/26 01:00:00
       content: 湘潭的一角。
       address: 湖南湘潭
