@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vue-cliboard2异步操作中使用iOS中失效</title>
+      <link href="/2024/06/06/ji-lu/vue-cliboard2-yi-bu-cao-zuo-zhong-shi-yong-ios-zhong-shi-xiao/"/>
+      <url>/2024/06/06/ji-lu/vue-cliboard2-yi-bu-cao-zuo-zhong-shi-yong-ios-zhong-shi-xiao/</url>
+      
+        <content type="html"><![CDATA[<ul><li>问题描述：</li></ul><p>在iOS中，在异步操作中使用vue-clipboard2实现复制功能，提示复制成功，但未复制到任何内容</p><ul><li>解决方案：</li></ul><p>vue-clipboard2的this.$copyText不能写在异步方法中，所以，可以换种实现方式，或者是给this.$copyText方法包裹一层setTimeout方法，如下：</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$copyText</span><span class="token punctuation">(</span><span class="token string">'要复制的内容'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'复制成功'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>独行西安</title>
       <link href="/2024/05/11/lu-xing/xi-an/"/>
       <url>/2024/05/11/lu-xing/xi-an/</url>
