@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vue项目node_modules文件夹越来越大问题排查</title>
+      <link href="/2024/06/24/ji-lu/vue-xiang-mu-node-modules-wen-jian-jia-yue-lai-yue-da-wen-ti-pai-cha/"/>
+      <url>/2024/06/24/ji-lu/vue-xiang-mu-node-modules-wen-jian-jia-yue-lai-yue-da-wen-ti-pai-cha/</url>
+      
+        <content type="html"><![CDATA[<!-- 文章目录一、排查node_modules包为什么会越来越大--><h2 id="事件背景"><a href="#事件背景" class="headerlink" title="事件背景"></a>事件背景</h2><blockquote><p>公司项目比较多，所以电脑本地下载的项目也比较多，然后硬盘空间越来越不够用，就把一些不经常改动的项目删除了，并且把一些系统缓存都清掉了，但是效果并不明显，依旧不够用。有一项目比较大，就怀疑是这个项目的问题。在某一次删除node_modules重装时，竟然有夸张的17+个G</p></blockquote><h2 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h2><ul><li><p>现象：<br>删除node_modules,重新安装，只有几百兆的大小。运行npm run dev命令之后，会立即增加几十兆，重复多次运行，发现未增加空间。修改代码，实时编译之后，发现空间增加5兆左右，只要修改一次就增加一次。</p></li><li><p>尝试解决方案：</p></li></ul><p>替换包管理工具，yarn 发现问题依旧存在。<br>考虑是不是缓存引起</p><p>查阅vue-cli官网，发现官网有这么一句话。</p><p><img src="https://gitee.com/syy1101/image/raw/master/5a25879f38c24716b9b9cd08d900a37b.png" alt="配置"><br>至此，.cache文件夹进入视野。</p><p>是不是这个loader引起的呢？是不是去除这个loader就能解决该问题。<br>在vue.config.js中的chainWebpack中配置如下代码：</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>  <span class="token function">chainWebpack</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>      config<span class="token punctuation">.</span>module<span class="token punctuation">.</span><span class="token function">rule</span><span class="token punctuation">(</span><span class="token string">'vue'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>uses<span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'cache-loader'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      config<span class="token punctuation">.</span>module<span class="token punctuation">.</span><span class="token function">rule</span><span class="token punctuation">(</span><span class="token string">'js'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>uses<span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'cache-loader'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>代码打印，确实已删除了<code>loader</code>，但是现象依旧存在。<br>会不会是其他插件引起的，仔细观察后发现，<code>.cache</code>中的<code>compression-webpack-plugin</code>每次增加的空间，正好是整个node_modules增加的空间。<br>查看<code>vue.config.js</code>，插件的配置确实存在<code>compression-webpack-plugin</code>，且没有区分环境。<br>直接先注释，运行项目，观察现象消失。<br>至此，问题终于定位到了。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p><code>compression-webpack-plugin</code>，压缩资源，配合nginx加速资源加载，优化体验。<br>解决方式：针对该插件直接区分下环境，只有在生产打包的时候，进行启用即可。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue-cliboard2异步操作中使用iOS中失效</title>
       <link href="/2024/06/06/ji-lu/vue-cliboard2-yi-bu-cao-zuo-zhong-shi-yong-ios-zhong-shi-xiao/"/>
       <url>/2024/06/06/ji-lu/vue-cliboard2-yi-bu-cao-zuo-zhong-shi-yong-ios-zhong-shi-xiao/</url>
