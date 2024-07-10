@@ -432,6 +432,31 @@
     
     
     <entry>
+      <title>js常见小问题</title>
+      <link href="/2023/09/11/qian-duan/js-chang-jian-xiao-wen-ti/"/>
+      <url>/2023/09/11/qian-duan/js-chang-jian-xiao-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、解构赋值"><a href="#一、解构赋值" class="headerlink" title="一、解构赋值"></a>一、解构赋值</h2><p>接口返回数据格式：</p><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span><span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token property">"total"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token property">"list"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>使用：</p><p><code>const &#123;list = []&#125; = data.list</code></p><ul><li>问题：当返回的list为<code>null</code>时，解构list时设置初始值为<code>[]</code>无效</li></ul><blockquote><p><strong>原因</strong>：<br>JavaScript 的解构赋值遵循以下规则：<br>如果对象的属性存在且不是 undefined，则会使用该属性的值。<br>如果对象的属性不存在或值是 undefined，则会使用提供的默认值。<br>因此，当 data.list 的值是 null 时，它会被视为一个有效值，而不是 undefined，所以默认值 [] 不会被应用。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端性能优化</title>
       <link href="/2023/09/11/qian-duan/xing-neng-you-hua/"/>
       <url>/2023/09/11/qian-duan/xing-neng-you-hua/</url>
