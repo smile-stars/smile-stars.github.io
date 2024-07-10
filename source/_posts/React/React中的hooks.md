@@ -5,7 +5,6 @@ tags:
 	- React
 main_color: '#a5b6e7'
 categories:
-	- React
 	- 前端
 ---
 
