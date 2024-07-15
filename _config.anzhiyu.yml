@@ -201,7 +201,7 @@ post_meta:
     categories: true # true or false 文章页是否显示分类
     tags: true # true or false 文章页是否显示标籤
     label: true # true or false 显示描述性文字
-    unread: false # true or false 文章未读功能
+    unread: true # true or false 文章未读功能
 
 # 主色调相关配置
 mainTone:
