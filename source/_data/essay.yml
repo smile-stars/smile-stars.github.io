@@ -7,6 +7,13 @@
   home_essay: true
   top_background: https://img02.anheyu.com/adminuploads/1/2022/09/05/6315e14929f74.webp
   essay_list:
+    - content: 一个人的旅行——安阳
+      date: 2024/10/02 18:00:00
+      image:
+        - https://gitee.com/syy1101/image/raw/master/251a5cb2bf66a8d0d68ac2ca830e38c.jpg
+        - https://gitee.com/syy1101/image/raw/master/bb77c337429dbe17854914e4bbf5c5a.jpg
+        - https://gitee.com/syy1101/image/raw/master/06effc26b9fdbeb549af6484884ae9f.jpg
+        - https://gitee.com/syy1101/image/raw/master/8ea8c9fbeb82ae3e30027e9a3d22697.jpg
     - content: 一个人的旅行——西安
       date: 2024/05/01 15:10:00
       image:
