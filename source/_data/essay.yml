@@ -7,7 +7,11 @@
   home_essay: true
   top_background: https://img02.anheyu.com/adminuploads/1/2022/09/05/6315e14929f74.webp
   essay_list:
-    - content: 一个人的旅行——安阳
+    - content: 北京一人行
+      date: 2024/11/16 18:00:00
+      image:
+        - https://gitee.com/syy1101/image/raw/master/251a5cb2bf66a8d0d68ac2ca830e38c.jpg
+    - content: 安阳一人行
       date: 2024/10/02 18:00:00
       image:
         - https://gitee.com/syy1101/image/raw/master/251a5cb2bf66a8d0d68ac2ca830e38c.jpg
@@ -27,12 +31,6 @@
       date: 2023/11/06
       video:
         - https://player.bilibili.com/player.html?aid=226886152&bvid=BV1Ch41137tR&cid=1081639816&p=1&autoplay=0
-    - content: 音乐支持了参数设置自定义歌单
-      date: 2023/01/02
-      link: https://blog.anheyu.com/music/?id=7269231710&server=tencent
-    - content: 朋友圈船新版本终于写完了, 耶✌️
-      date: 2022/11/05
-      link: https://blog.anheyu.com/album/
     - content: 终于把相册集搞定了, 耶✌️, 瀑布流在滑动滚动条一个视口范围上下100的情况执行一次, 到底部停止监听让性能高了好多，再也不会布局混乱🤪了
       date: 2022/10/25
       link: https://blog.anheyu.com/album/
