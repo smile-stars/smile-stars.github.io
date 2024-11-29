@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>混合开发问题记录</title>
+      <link href="/2024/11/29/ji-lu/hun-he-kai-fa-wen-ti-ji-lu/"/>
+      <url>/2024/11/29/ji-lu/hun-he-kai-fa-wen-ti-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>原生app嵌入h5页面，原生提供设置导航栏的方法供h5调用，出现h5 body高度计算不准确的问题</p><ol><li>原生app加载路由A，给路由A设置keepAlive，同时调用原生方法隐藏导航栏</li><li>路由A中触发点击事件，跳转到路由B，路由B不设置缓存，同时显示导航栏</li><li>路由B返回路由A，在activated中隐藏导航栏，此时就出现body高度计算不正确的问题</li></ol><p>body高度 &#x3D; 屏幕高度 - 导航栏高度</p><p><img src="https://gitee.com/syy1101/image/raw/master/20241129.png" alt="截图"></p><h2 id="可能原因"><a href="#可能原因" class="headerlink" title="可能原因"></a>可能原因</h2><ul><li>动态隐藏原生导航栏<br>A路由设置了keepAlive，所以页面在切换时并没有完全销毁，这就导致了返回时页面布局没有重新计算。</li><li>keepAlive缓存<br>由于A路由被缓存，在返回时不会触发完整的生命周期重新渲染，导致页面的body高度计算不准确。</li></ul><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol><li>确保activated时正确隐藏导航栏并更新布局： 在A的activated生命周期钩子中，除了隐藏原生导航栏，你还需要重新计算body的高度。你可以通过获取window.innerHeight来动态调整页面的高度，考虑到原生导航栏的显示与隐藏。</li></ol><pre class="line-numbers language-none"><code class="language-none">activated() &#123;  &#x2F;&#x2F; 隐藏原生导航栏  this.hideNativeNavBar();    &#x2F;&#x2F; 更新页面高度：若原生导航栏隐藏，则重新计算高度  if (this.isNativeNavBarHidden) &#123;    document.body.style.height &#x3D; &#96;$&#123;window.innerHeight&#125;px&#96;;  &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="2"><li>监听页面的resize事件： 你可以监听屏幕尺寸变化，手动调整页面布局。因为在一些场景下（例如原生导航栏显示与隐藏），页面的body高度需要实时更新。</li></ol><pre class="line-numbers language-none"><code class="language-none">mounted() &#123;  window.addEventListener(&#39;resize&#39;, this.adjustLayout);&#125;,beforeDestroy() &#123;  window.removeEventListener(&#39;resize&#39;, this.adjustLayout);&#125;,methods: &#123;  adjustLayout() &#123;    &#x2F;&#x2F; 重新计算页面高度    if (this.isNativeNavBarHidden) &#123;      document.body.style.height &#x3D; &#96;$&#123;window.innerHeight&#125;px&#96;;    &#125;  &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="3"><li>手动触发activated生命周期后布局调整： 如果A路由是缓存的，生命周期钩子可能没有触发完全，或者你需要通过nextTick或setTimeout来延迟处理布局，确保A页面的body高度正确。</li></ol><pre class="line-numbers language-none"><code class="language-none">activated() &#123;  this.$nextTick(() &#x3D;&gt; &#123;    if (this.isNativeNavBarHidden) &#123;      document.body.style.height &#x3D; &#96;$&#123;window.innerHeight&#125;px&#96;;    &#125;  &#125;);&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="针对我的处理方式"><a href="#针对我的处理方式" class="headerlink" title="针对我的处理方式"></a>针对我的处理方式</h2><p>因为每次页面激活都会重新请求数据，在请求成功之前先显示的骨架屏，由于骨架屏真实高度大于body的高度，从页面上表现出来的是骨架屏上部被覆盖，所以在请求成功后，再隐藏原生导航栏，即可解决这个问题。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+            <tag> 混合开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>React记录</title>
       <link href="/2024/11/19/qian-duan/react-ji-lu/"/>
       <url>/2024/11/19/qian-duan/react-ji-lu/</url>
@@ -11,6 +38,18 @@
         <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol><li>React 第一章 概述</li></ol><p><a href="https://blog.csdn.net/aXin_li/article/details/136387736">https://blog.csdn.net/aXin_li/article/details/136387736</a></p><ol start="2"><li>React 第二章 JSX</li></ol><p><a href="https://blog.csdn.net/aXin_li/article/details/136410128">https://blog.csdn.net/aXin_li/article/details/136410128</a></p><ol start="3"><li>React 第三章 组件与事件绑定</li></ol><p><a href="https://blog.csdn.net/aXin_li/article/details/136423642">https://blog.csdn.net/aXin_li/article/details/136423642</a></p><ol start="4"><li>React 第四章 组件状态与数据传递</li></ol><p><a href="https://blog.csdn.net/aXin_li/article/details/136439414">https://blog.csdn.net/aXin_li/article/details/136439414</a></p><ol start="5"><li>React 第五章 表单</li></ol><p><a href="https://blog.csdn.net/aXin_li/article/details/136464666">https://blog.csdn.net/aXin_li/article/details/136464666</a></p><ol start="6"><li>React 第六章 生命周期</li></ol><p><a href="https://blog.csdn.net/aXin_li/article/details/136496963">https://blog.csdn.net/aXin_li/article/details/136496963</a></p><ol start="7"><li>React 第七章 Hooks</li></ol><p><a href="https://blog.csdn.net/aXin_li/article/details/136497236">https://blog.csdn.net/aXin_li/article/details/136497236</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
       
     </entry>
     
