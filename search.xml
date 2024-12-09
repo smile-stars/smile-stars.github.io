@@ -340,12 +340,6 @@
         <content type="html"><![CDATA[<mark class="hl-label blue">时间复杂度</mark>  <mark class="hl-label pink">空间复杂度</mark>  <mark class="hl-label red">递归</mark>  <mark class="hl-label purple">链表</mark>  <mark class="hl-label green">堆</mark>  <mark class="hl-label orange">栈</mark> ]]></content>
       
       
-      <categories>
-          
-          <category> 算法 </category>
-          
-      </categories>
-      
       
     </entry>
     
