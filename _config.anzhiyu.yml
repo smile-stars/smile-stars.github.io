@@ -1080,11 +1080,11 @@ home_top:
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
-    - name: 算法
-      path: /categories/算法/
-      shadow: var(--anzhiyu-shadow-yellow)
-      class: yellow
-      icon: anzhiyu-icon-fire
+    # - name: 算法
+    #   path: /categories/算法/
+      # shadow: var(--anzhiyu-shadow-yellow)
+      # class: yellow
+      # icon: anzhiyu-icon-fire
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: false
@@ -1236,7 +1236,8 @@ rightClickMenu:
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
   enable: true
-  img: https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png
+  # img: https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png
+  img: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
 
 # 动效
 dynamicEffect:
